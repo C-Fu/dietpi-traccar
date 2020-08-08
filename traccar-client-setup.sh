@@ -19,9 +19,9 @@ echo "i2c-dev" >> /etc/modules
 echo "rtc-ds1307" >> /etc/modules
 
 #add to rc.local
-nano /etc/rc.local
-echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device
-hwclock -s
-date
+touch /etc/rc.local
+echo "echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device" > /etc/rc.local
+echo "hwclock -s" > /etc/rc.local
+echo "date" > /etc/rc.local
 
 exit 0
