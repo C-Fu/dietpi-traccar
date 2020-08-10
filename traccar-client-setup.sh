@@ -1,5 +1,5 @@
 #!/bin/bash
-apt install unzip rsync certbot python3-certbot-apache python-smbus i2c-tools
+apt install -y unzip rsync certbot python3-certbot-apache python-smbus i2c-tools
 mkdir /root/recordings #local save
 mkdir /mnt/recordings #sync folder
 mkdir /root/gps #local save
