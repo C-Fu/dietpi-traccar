@@ -24,4 +24,13 @@ echo "echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device" > /etc/rc.loca
 echo "hwclock -s" > /etc/rc.local
 echo "date" > /etc/rc.local
 
+#setup sq11
+apt install fswebcam v4l-utils
+modprobe uvcvideo -r
+modprobe uvcvideo quirks=2
+echo "options uvcvideo quirks=2" > /etc/modprobe.d/uvcvideo.conf
+
+
+
+
 exit 0
