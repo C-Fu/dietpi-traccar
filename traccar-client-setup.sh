@@ -25,7 +25,7 @@ echo "hwclock -s" > /etc/rc.local
 echo "date" > /etc/rc.local
 
 #setup sq11
-apt install fswebcam v4l-utils
+apt install -y fswebcam v4l-utils
 modprobe uvcvideo -r
 modprobe uvcvideo quirks=2
 echo "options uvcvideo quirks=2" > /etc/modprobe.d/uvcvideo.conf
