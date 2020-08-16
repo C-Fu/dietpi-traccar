@@ -29,6 +29,8 @@ apt install -y fswebcam v4l-utils
 modprobe uvcvideo -r
 modprobe uvcvideo quirks=2
 echo "options uvcvideo quirks=2" > /etc/modprobe.d/uvcvideo.conf
+#add module(s)
+echo "bcm2835-v4l2" >> /etc/modules
 
 
 
