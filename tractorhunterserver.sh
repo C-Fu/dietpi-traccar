@@ -14,7 +14,9 @@ echo "#/     http://$HOSTNAME.local         /#"
 echo "#/     https://$HOSTNAME.local        /#"
 echo "#//////////////////////////////////////#"
 mkdir /mnt/dietpi_userdata/nextcloudpi
-docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v /mnt/dietpi_userdata/nextcloud:/data --name nextcloudpi ownyourbits/nextcloudpi $DOMAIN
+domain=$HOSTNAME.local
+docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v /mnt/dietpi_userdata/nextcloud:/data --name nextcloudpi --restart=always ownyourbits/nextcloudpi $DOMAIN
+echo "alias masukncp='docker
 
 # Refresh
 apt update
